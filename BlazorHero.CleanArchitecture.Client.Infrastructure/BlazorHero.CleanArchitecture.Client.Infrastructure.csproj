@@ -13,7 +13,11 @@
     <PackageReference Include="Toolbelt.Blazor.HttpClientInterceptor" Version="9.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BlazorHero.CleanArchitecture.AccountService.Interfaces\BlazorHero.CleanArchitecture.AccountService.Interfaces.csproj" />
     <ProjectReference Include="..\BlazorHero.CleanArchitecture.Application\BlazorHero.CleanArchitecture.Application.csproj" />
-    <ProjectReference Include="..\BlazorHero.CleanArchitecture.Shared\BlazorHero.CleanArchitecture.Shared.csproj" />
+    <ProjectReference Include="..\BlazorHero.CleanArchitecture.AuditService.Interfaces\BlazorHero.CleanArchitecture.AuditService.Interfaces.csproj" />
+    <ProjectReference Include="..\BlazorHero.CleanArchitecture.ChatService.Interfaces\BlazorHero.CleanArchitecture.ChatService.Interfaces.csproj" />
+    <ProjectReference Include="..\BlazorHero.CleanArchitecture.Infrastructure.Interfaces\BlazorHero.CleanArchitecture.Infrastructure.Interfaces.csproj" />
+    <ProjectReference Include="..\BlazorHero.CleanArchitecture.TokenService.Interfaces\BlazorHero.CleanArchitecture.TokenService.Interfaces.csproj" />
   </ItemGroup>
 </Project>

@@ -1,14 +1,14 @@
 ﻿using System;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
 using BlazorHero.CleanArchitecture.Client.Extensions;
 using BlazorHero.CleanArchitecture.Client.Infrastructure.Mappings;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 using System.Threading.Tasks;
+using BlazorHero.CleanArchitecture.Application.Constants.Application;
+using BlazorHero.CleanArchitecture.RoleService.Interfaces.Requests;
+using BlazorHero.CleanArchitecture.RoleService.Interfaces.Responses;
 
 namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
 {
@@ -25,7 +25,6 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
 
         public PermissionResponse model { get; set; }
         private IMapper _mapper;
-        private RoleClaimsResponse roleClaims = new RoleClaimsResponse();
         private string searchString = "";
         private bool _dense = true;
         private bool _striped = true;
