@@ -16,7 +16,7 @@
     <None Remove="Persistence\**" />
   </ItemGroup>-->
   <ItemGroup>
-    <PackageReference Include="Blazored.LocalStorage" Version="3.0.0" />
+    <PackageReference Include="Blazored.LocalStorage" Version="4.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlazorHero.CleanArchitecture.CurrentUserService.Interfaces\BlazorHero.CleanArchitecture.CurrentUserService.Interfaces.csproj" />

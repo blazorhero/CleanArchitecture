@@ -199,7 +199,7 @@ namespace BlazorHero.CleanArchitecture.UserService
             var route = "account/reset-password";
             var endpointUri = new Uri(string.Concat($"{origin}/", route));
             var passwordResetURL = QueryHelpers.AddQueryString(endpointUri.ToString(), "Token", code);
-            var mailRequest = new MailRequest()
+            var mailRequest = new MailRequest
             {
                 Body = $"{_localizer["Please reset your password by"]} <a href='{HtmlEncoder.Default.Encode(passwordResetURL)}'>{_localizer["clicking here"]}</a>.",
                 Subject = _localizer["Reset Password"],

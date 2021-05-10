@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using BlazorHero.CleanArchitecture.Application.Constants.Permission;
 using BlazorHero.CleanArchitecture.RoleService.Interfaces.Responses;
 
-namespace BlazorHero.CleanArchitecture.RoleService.Helpers
+namespace BlazorHero.CleanArchitecture.RoleService.Extensions
 {
-    public static class ClaimsHelper
+    public static class ClaimExtensions
     {
         public static void GetPermissions(this List<RoleClaimsResponse> allPermissions, Type policy, string roleId)
         {

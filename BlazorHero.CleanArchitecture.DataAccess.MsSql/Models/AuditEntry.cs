@@ -4,8 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using BlazorHero.CleanArchitecture.DataAccess.MsSql.Enums;
+using BlazorHero.CleanArchitecture.Domain.Entities.Audit;
 
-namespace BlazorHero.CleanArchitecture.DataAccess.MsSql.Models.Audit
+namespace BlazorHero.CleanArchitecture.DataAccess.MsSql.Models
 {
     public class AuditEntry
     {
@@ -25,17 +26,19 @@ namespace BlazorHero.CleanArchitecture.DataAccess.MsSql.Models.Audit
         public List<string> ChangedColumns { get; } = new List<string>();
         public bool HasTemporaryProperties => TemporaryProperties.Any();
 
-        public Domain.Entities.Audit.Audit ToAudit()
+        public Audit ToAudit()
         {
-            var audit = new Domain.Entities.Audit.Audit();
-            audit.UserId = UserId;
-            audit.Type = AuditType.ToString();
-            audit.TableName = TableName;
-            audit.DateTime = DateTime.UtcNow;
-            audit.PrimaryKey = JsonConvert.SerializeObject(KeyValues);
-            audit.OldValues = OldValues.Count == 0 ? null : JsonConvert.SerializeObject(OldValues);
-            audit.NewValues = NewValues.Count == 0 ? null : JsonConvert.SerializeObject(NewValues);
-            audit.AffectedColumns = ChangedColumns.Count == 0 ? null : JsonConvert.SerializeObject(ChangedColumns);
+            var audit = new Audit
+            {
+                UserId = UserId,
+                Type = AuditType.ToString(),
+                TableName = TableName,
+                DateTime = DateTime.UtcNow,
+                PrimaryKey = JsonConvert.SerializeObject(KeyValues),
+                OldValues = OldValues.Count == 0 ? null : JsonConvert.SerializeObject(OldValues),
+                NewValues = NewValues.Count == 0 ? null : JsonConvert.SerializeObject(NewValues),
+                AffectedColumns = ChangedColumns.Count == 0 ? null : JsonConvert.SerializeObject(ChangedColumns)
+            };
             return audit;
         }
     }

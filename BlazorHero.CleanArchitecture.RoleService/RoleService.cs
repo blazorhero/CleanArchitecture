@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using BlazorHero.CleanArchitecture.Application.Constants.Permission;
 using BlazorHero.CleanArchitecture.Application.Constants.Role;
 using BlazorHero.CleanArchitecture.Domain.Entities.Identity;
-using BlazorHero.CleanArchitecture.RoleService.Helpers;
+using BlazorHero.CleanArchitecture.RoleService.Extensions;
 using BlazorHero.CleanArchitecture.RoleService.Interfaces;
 using BlazorHero.CleanArchitecture.RoleService.Interfaces.Requests;
 using BlazorHero.CleanArchitecture.RoleService.Interfaces.Responses;

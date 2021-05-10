@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Requests.Identity;
 using BlazorHero.CleanArchitecture.UserService.Interfaces.Requests;
 using BlazorHero.CleanArchitecture.UserService.Interfaces.Responses;
 using BlazorHero.CleanArchitecture.Utils.Wrapper;

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BlazorHero.CleanArchitecture.DataAccess.Interfaces.Contexts;
 using BlazorHero.CleanArchitecture.DataAccess.MsSql.Enums;
-using BlazorHero.CleanArchitecture.DataAccess.MsSql.Models.Audit;
+using BlazorHero.CleanArchitecture.DataAccess.MsSql.Models;
 using BlazorHero.CleanArchitecture.Domain.Entities.Audit;
 using BlazorHero.CleanArchitecture.Domain.Entities.Identity;
 
@@ -14,7 +14,7 @@ namespace BlazorHero.CleanArchitecture.DataAccess.MsSql.Contexts
 {
     public abstract class AuditableContext : IdentityDbContext<BlazorHeroUser, IdentityRole, string>, IAuditableContext
     {
-        public AuditableContext(DbContextOptions options) : base(options)
+        protected AuditableContext(DbContextOptions options) : base(options)
         {
         }
 

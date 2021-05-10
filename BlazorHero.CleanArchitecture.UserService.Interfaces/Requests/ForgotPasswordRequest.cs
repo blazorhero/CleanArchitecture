@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Requests.Identity
+namespace BlazorHero.CleanArchitecture.UserService.Interfaces.Requests
 {
     public class ForgotPasswordRequest
     {

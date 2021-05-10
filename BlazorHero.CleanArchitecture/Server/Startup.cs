@@ -10,10 +10,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
-using BlazorHero.CleanArchitecture.AuditService.Extensions;
-using BlazorHero.CleanArchitecture.ChatService.Extensions;
-using BlazorHero.CleanArchitecture.RoleService.Extensions;
-using BlazorHero.CleanArchitecture.UserService.Extensions;
 
 namespace BlazorHero.CleanArchitecture.Server
 {

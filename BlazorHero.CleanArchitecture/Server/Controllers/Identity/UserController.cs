@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using BlazorHero.CleanArchitecture.Application.Constants.Permission;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Requests.Identity;
 using BlazorHero.CleanArchitecture.UserService.Interfaces;
 using BlazorHero.CleanArchitecture.UserService.Interfaces.Requests;
 
