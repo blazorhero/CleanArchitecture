@@ -23,6 +23,7 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
         public List<UserRoleModel> UserRolesList { get; set; } = new();
         public ClaimsPrincipal CurrentUser { get; set; }
 
+        private UserRoleModel userRole = new UserRoleModel();
         private string searchString = "";
         private bool _dense = true;
         private bool _striped = true;
